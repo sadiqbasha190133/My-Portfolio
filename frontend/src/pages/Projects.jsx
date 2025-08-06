@@ -23,7 +23,7 @@ export default function Projects() {
         >
           <h2 className="text-xl font-bold">{project.name}</h2>
           <p className="text-gray-600 mt-2">{project.description}</p>
-          {project.demo_link && (
+          {project.demo_link ?(
             <a
               href={project.demo_link}
               target="_blank"
@@ -31,8 +31,22 @@ export default function Projects() {
               className="mt-4 inline-block text-blue-600 hover:underline"
             >
               View Project →
+            </a>)
+            : project.github_link ?
+            (
+              <a
+              href={project.github_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-blue-600 hover:underline"
+            >
+              View Project →
             </a>
-          )}
+            )
+            :
+            null
+          }
+
         </motion.div>
       ))}
     </section>

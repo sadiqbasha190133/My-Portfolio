@@ -21,6 +21,7 @@ export default function About() {
       <h1 className="text-3xl font-bold text-blue-700">{about.name}</h1>
       <p className="text-lg text-gray-500">{about.role}</p>
       <p className="mt-4 text-gray-600">{about.description}</p>
+      
     </motion.section>
   );
 }
