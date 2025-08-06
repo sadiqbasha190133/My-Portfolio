@@ -23,3 +23,11 @@ class ContactMessage(Base):
     name = Column(String(100), nullable=False)
     email = Column(String(100), nullable=False)
     message = Column(Text, nullable=False)
+
+class Admin(Base):
+    __tablename__ = "admin"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String(100), nullable = False)
+    email = Column(String(100), nullable = False)
+    password = Column(String(100), nullable=False)
+

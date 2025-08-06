@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import Base, engine
 import models
-from routes import projects, about, contact
+from routes import projects, about, contact, admin
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -21,3 +21,4 @@ app.add_middleware(
 app.include_router(projects.router)
 app.include_router(about.router)
 app.include_router(contact.router)
+app.include_router(admin.router)

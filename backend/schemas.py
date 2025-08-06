@@ -36,3 +36,33 @@ class ContactMessage(ContactBase):
     id: int
     class Config:
         orm_mode = True
+
+
+class Admin(BaseModel):
+    name: str
+    email: str
+    password: str 
+
+class ShowAdmin(Admin):
+    id: int
+    class Config:
+        orm_mode = True
+
+class LoginAdmin(BaseModel):
+    email: str
+    password: str
+
+class ShowLoginAdmin(BaseModel):
+    id: int
+    name: str
+    email: str
+    class Config:
+        orm_mode = True
+
+
+
+    
+
+
+
+    

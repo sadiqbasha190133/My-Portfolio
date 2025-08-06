@@ -1,17 +1,21 @@
+import { useState, useEffect } from "react";
+import { API } from "../api";
 import { motion } from "framer-motion";
 
-const projects = [
-  { name: "OYO Clone", description: "A hotel booking platform built with MERN stack.", link: "#" },
-  { name: "Digital Outpass System", description: "A secure platform for student movement approvals.", link: "#" },
-  { name: "YouTube AI Transcript Generator", description: "AI-powered app for transcribing and summarizing videos.", link: "#" },
-];
-
 export default function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    API.get("/projects")
+      .then((res) => setProjects(res.data))
+      .catch((err) => console.error("Error fetching projects:", err));
+  }, []);
+
   return (
     <section className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
       {projects.map((project, index) => (
         <motion.div
-          key={index}
+          key={project.id}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -19,9 +23,16 @@ export default function Projects() {
         >
           <h2 className="text-xl font-bold">{project.name}</h2>
           <p className="text-gray-600 mt-2">{project.description}</p>
-          <a href={project.link} className="mt-4 inline-block text-blue-600 hover:underline">
-            View Project →
-          </a>
+          {project.demo_link && (
+            <a
+              href={project.demo_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-blue-600 hover:underline"
+            >
+              View Project →
+            </a>
+          )}
         </motion.div>
       ))}
     </section>
