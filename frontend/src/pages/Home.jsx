@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -14,12 +15,7 @@ export default function Home() {
       <p className="mt-4 text-lg text-gray-600 max-w-2xl">
         A passionate Full Stack Developer crafting modern, responsive, and user-friendly applications.
       </p>
-      <a
-        href="/projects"
-        className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-      >
-        View My Work
-      </a>
+      <Link to="/projects" className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">View My Work</Link>
     </motion.section>
   );
 }

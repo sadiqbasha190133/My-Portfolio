@@ -1,11 +1,44 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { API } from "../api";
+import { useParams } from "react-router-dom";
 
 export default function ProjectUploadForm() {
-
-  const [form, setForm] = useState({name:"", title_description:"", description:"", tech_stack:"", github_link:"", demo_link:"", images:[]})
+  const { id } = useParams()
+  const [form, setForm] = useState({})
   const [status, setStatus] = useState("")
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProject = async() =>{
+        try{
+            const res = await API.get(`/projects/${id}`)
+            setForm(res.data)
+        }
+        catch (err){
+            console.log(err)
+        }
+        finally{
+            setLoading(false)
+        }
+    }; fetchProject()
+    }, [id]);
+
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center h-screen text-lg">
+                Loading project details...
+            </div>
+        );
+    }
+
+//   if (!project) {
+//     return(
+//         <div className="flex justify-center items-center h-screen text-red-500">
+//             Project not found.
+//         </div>
+//     );
+//   }
 
   const handleChange = (e) =>{
     setForm({...form, [e.target.name]:e.target.value})
@@ -32,10 +65,10 @@ export default function ProjectUploadForm() {
     };
 
     try{
-      const res = await API.post("/project/create", payload)
+      const res = await API.put(`/projects/update/${id}`, payload)
       if (res){
         console.log(res)
-        setStatus("Project Uploaded Successfully ✅")
+        setStatus("Project Updated Successfully ✅")
 
       }
 
@@ -59,7 +92,7 @@ export default function ProjectUploadForm() {
           {status}
         </p>
         <h2 className="text-2xl font-bold text-center text-blue-700 mb-6">
-          Project Details
+          Editing: {form.name}
         </h2>
 
         {/* Name Field */}
