@@ -40,7 +40,7 @@ export default function AdminLogin() {
       className="flex justify-center items-center min-h-screen bg-gray-100"
     >
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
-        <h1 className="text-2xl font-bold text-center text-blue-700">Admin Login</h1>
+        <h1 className="text-2xl font-bold text-center text-black">Admin Login</h1>
         <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4">
           <input
             type="email"
@@ -60,7 +60,7 @@ export default function AdminLogin() {
             className="border p-2 rounded"
             required
           />
-          <button className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          <button className="bg-black text-white py-2 rounded hover:bg-white hover:text-black hover:border-black border-2 transition">
             Login
           </button>
           {status && (
