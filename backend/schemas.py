@@ -1,19 +1,33 @@
 
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
+
+
+class ProjectImageBase(BaseModel):
+    image_url: str
+
+class ProjectImageCreate(ProjectImageBase):
+    pass
+
+class ProjectImage(ProjectImageBase):
+    id: int
+    class Config:
+        orm_mode = True
 
 class ProjectBase(BaseModel):
     name: str
+    title_description: str
     description: str
     tech_stack: Optional[str]
     demo_link: Optional[str]
     github_link: Optional[str]
 
 class ProjectCreate(ProjectBase):
-    pass
+    images: Optional[List[ProjectImageCreate]] = []
 
 class Project(ProjectBase):
     id: int
+    images: List[ProjectImage] = []
     class Config:
         orm_mode = True
 

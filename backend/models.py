@@ -1,14 +1,25 @@
-from sqlalchemy import Column, Integer, String, Text
+from sqlalchemy import Column, Integer, String, Text, ForeignKey
+from sqlalchemy.orm import relationship
 from database import Base
+
 
 class Project(Base):
     __tablename__ = "projects"
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(100), nullable=False)
+    title_description = Column(Text, nullable=False)
     description = Column(Text, nullable=False)
     tech_stack = Column(String(200))
     demo_link = Column(String(200))
     github_link = Column(String(200))
+    images = relationship("ProjectImages", back_populates="project", cascade="all, delete")
+    
+class ProjectImages(Base):
+    __tablename__ = "project_images"
+    id = Column(Integer, primary_key=True, index=True)
+    image_url = Column(String(300), nullable=False)
+    project_id = Column(Integer, ForeignKey("projects.id"))
+    project = relationship("Project", back_populates="images")
 
 class About(Base):
     __tablename__ = "about"
