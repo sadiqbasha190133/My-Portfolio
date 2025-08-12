@@ -55,7 +55,7 @@ export default function ProjectDetails() {
       {project.images?.length > 0 && (
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4">Project Screenshots</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
             {project.images.map((img, index) => (
               <img
                 key={index}
@@ -81,7 +81,7 @@ export default function ProjectDetails() {
             href={project.demo_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+            className="px-5 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition"
           >
             Live Demo
           </a>

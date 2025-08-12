@@ -7,14 +7,25 @@ export default function Navbar() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="bg-blue-600 text-white p-4 flex justify-between items-center"
+      className="sticky top-0 z-50 bg-gradient-to-r from-gray-900 via-gray-800 to-orange-600 text-white px-8 py-4 flex justify-between items-center shadow-lg backdrop-blur-md bg-opacity-90"
     >
-      <h1 className="text-xl font-bold">Saadiq Shaik</h1>
-      <div className="flex gap-6">
-        <Link to="/" className="hover:text-yellow-300">Home</Link>
-        <Link to="/projects" className="hover:text-yellow-300">Projects</Link>
-        <Link to="/about" className="hover:text-yellow-300">About</Link>
-        <Link to="/contact" className="hover:text-yellow-300">Contact</Link>
+      {/* Brand */}
+      <h1 className="text-2xl font-extrabold tracking-wide">
+        <span className="text-orange-400">Sadiq</span> Shaik
+      </h1>
+
+      {/* Links */}
+      <div className="flex gap-8 text-lg font-medium">
+        {["Home", "Projects", "Contact"].map((item) => (
+          <Link
+            key={item}
+            to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+            className="relative group"
+          >
+            {item}
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-400 transition-all group-hover:w-full"></span>
+          </Link>
+        ))}
       </div>
     </motion.nav>
   );

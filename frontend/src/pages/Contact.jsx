@@ -23,7 +23,7 @@ export default function Contact() {
       transition={{ duration: 0.8 }}
       className="p-8 max-w-xl mx-auto"
     >
-      <h1 className="text-3xl font-bold text-blue-700 text-center">Contact Me</h1>
+      <h1 className="text-3xl font-bold text-orange-700 text-center">Contact Me</h1>
       <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
         <input
           type="text"
@@ -48,7 +48,7 @@ export default function Contact() {
           onChange={handleChange}
           className="border p-2 rounded h-32"
         ></textarea>
-        <button className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+        <button className="bg-orange-600 text-white py-2 rounded hover:bg-orange-700">
           Send Message
         </button>
         {status && <p className="mt-2 text-green-600">{status}</p>}

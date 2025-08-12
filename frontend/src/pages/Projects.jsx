@@ -22,13 +22,13 @@ export default function Projects() {
           transition={{ duration: 0.5, delay: index * 0.2 }}
           className="border rounded-lg shadow p-4 hover:shadow-lg"
         >
-          <h2 className="text-xl font-bold">{project.name}</h2>
+          <h2 className="text-xl font-bold text-orange-600">{project.name}</h2>
 
-          <p className="text-gray-600 mt-2">{project.title_description}</p>
+          <p className="text-gray-600 leading-relaxed mt-2">{project.title_description}</p>
 
           <Link
             to={`/projects/${project.id}`}
-            className="mt-4 inline-block text-blue-600 hover:underline"
+            className="mt-4 inline-block text-grey-800 hover:underline font-serif font-bold"
           >
             View Complete Project →
           </Link>
