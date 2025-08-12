@@ -24,7 +24,7 @@ export default function Contact() {
       className="p-8 max-w-xl mx-auto"
     >
       <h1 className="text-3xl font-bold text-orange-700 text-center">Contact Me</h1>
-      <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
+      {/* <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
         <input
           type="text"
           name="name"
@@ -52,7 +52,21 @@ export default function Contact() {
           Send Message
         </button>
         {status && <p className="mt-2 text-green-600">{status}</p>}
-      </form>
+      </form> */}
+
+      <div className="space-y-4 text-center text-gray-700 text-lg">
+        <p>
+          📞 Mobile: <a href="tel:+911234567890" className="text-orange-600 hover:underline">+91 9618460979</a>
+        </p>
+        <p>
+          📧 Email:{" "}
+          <a href="mailto:your.email@example.com" className="text-orange-600 hover:underline">
+            shaiksadiqbasha190133@gmail.com
+          </a>
+        </p>
+      </div>
+
+
     </motion.section>
   );
 }
