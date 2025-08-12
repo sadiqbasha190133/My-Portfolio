@@ -2,7 +2,6 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 import schemas, crud
 from database import get_db
-from hashing import get_password_hash
 
 router = APIRouter()
 
