@@ -9,7 +9,7 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 origins = [
-    "https://sadiq-myportfolio.netlify.app/",
+    "https://sadiq-myportfolio.netlify.app",
     "http://localhost:5173"
 ]
 
