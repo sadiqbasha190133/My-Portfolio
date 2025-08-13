@@ -23,7 +23,7 @@ export default function ProjectDetails() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen text-lg">
+      <div className="flex justify-center items-center h-screen text-lg text-orange-600 font-bold font-serif">
         Loading project details...
       </div>
     );
