@@ -33,8 +33,13 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="flex-1 flex justify-center mt-6 md:mt-0"
         >
-          <img
+          {/* <img
             src="https://i.ibb.co/TqRJK8Lp/Digital-nomad-lifestyle-young-man-engaged-with-laptop-in-3d-character-illustration-Premium-AI-genera.jpg"
+            alt="Sadiq portrait"
+            className="rounded-full shadow-lg w-60 h-60 object-cover border-4 border-orange-400"
+          /> */}
+          <img
+            src="https://i.ibb.co/n8gnSHZ8/sadiq-portfolio-photo1.jpg"
             alt="Sadiq portrait"
             className="rounded-full shadow-lg w-60 h-60 object-cover border-4 border-orange-400"
           />
@@ -57,7 +62,7 @@ export default function Home() {
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
           <p className="text-gray-600 leading-relaxed">
-            I’m a 2025 graduate who is a passionate and detail-oriented Full Stack Developer with a strong foundation in React.js, Django, Node.js, and modern frontend/backend technologies. 
+            I’m a 2025 graduate and I am a passionate and detail-oriented Full Stack Developer with a strong foundation in React.js, Django, Node.js, and modern frontend/backend technologies. 
             I specialize in building responsive, user-friendly, and performance-optimized web applications.<br/><br/>
 
             In my final year of my B.Tech in Computer Science at RGUKT RK-Valley, I’ve worked on real-world projects like a "Digital-Outpass-System" and a "YouTube-AI-Transcript-Generator", applying skills in MERN stack, REST APIs, PostgreSQL, MongoDB, and Generative AI.
@@ -197,15 +202,27 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="p-6 bg-gray-900 text-white text-center">
         <p className="mb-4">Connect with me:</p>
-        <div className="flex justify-center gap-6 mb-4">
-          <a href="https://github.com/sadiqbasha190133/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">GitHub</a>
-          <a href="https://www.linkedin.com/in/shaik-sadiq-basha/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">LinkedIn</a>
-          <a href="https://x.com/TheNameISADiQ" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">X(Twitter)</a>
-          <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">shaiksadiqbasha190133@gmail.com</a>
-          <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">+91 9618460979</a>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 justify-items-center mb-4">
+          <a href="https://github.com/sadiqbasha190133/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/shaik-sadiq-basha/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            LinkedIn
+          </a>
+          <a href="https://x.com/TheNameISADiQ" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            X (Twitter)
+          </a>
+          <a href="mailto:shaiksadiqbasha190133@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            shaiksadiqbasha190133@gmail.com
+          </a>
+          <a href="tel:+919618460979" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            +91 9618460979
+          </a>
         </div>
+
         <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Sadiq Shaik. All rights reserved.</p>
       </footer>
+
     </div>
   );
 }
