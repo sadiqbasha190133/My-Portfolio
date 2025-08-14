@@ -190,7 +190,7 @@ export default function Home() {
           You can view or download my latest resume below.
         </p>
         <a
-          href="https://drive.google.com/file/d/14qtv-7OYF6Byo2y_g_sZyTzNzkdmUKcl/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1bvjpp-P1OmN5izJPuYwLiJ13OFIZdLxK/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 inline-block px-6 py-3 bg-orange-500 hover:bg-orange-400 rounded-lg text-white font-semibold transition-all"
