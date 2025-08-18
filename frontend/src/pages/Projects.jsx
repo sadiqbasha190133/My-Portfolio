@@ -26,8 +26,9 @@ export default function Projects() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex flex-col items-center justify-center h-screen">
         <div className="h-12 w-12 border-4 border-t-4 border-gray-200 border-t-orange-600 rounded-full animate-spin"></div>
+        <div className="text-orange-600 font-serif font-bold">Please wait projects are loading from server...</div>
       </div>
     );
   }
