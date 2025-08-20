@@ -154,7 +154,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="flex p-8 bg-gradient-to-r from-teal-50 via-blue-50 to-cyan-50"
+        className="p-8 bg-gradient-to-r from-teal-50 via-blue-50 to-cyan-50 flex flex-col md:flex-row items-center gap-8"
       >
         <img
           src="https://www.rguktrkv.ac.in/images/rkvlogo.png"
@@ -162,7 +162,7 @@ export default function Home() {
           className="rounded-lg shadow-md w-80 h-auto object-cover mr-10"
         />
 
-        <div>
+        <div className="flex-1">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Education</h2>
           <ul className="space-y-4 text-gray-600">
             <li className="border-l-4 border-orange-500 pl-4">
