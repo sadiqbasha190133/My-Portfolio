@@ -28,7 +28,7 @@ export default function Projects() {
     return (
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="h-12 w-12 border-4 border-t-4 border-gray-200 border-t-orange-600 rounded-full animate-spin"></div>
-        <div className="text-orange-600 font-serif font-bold">Please wait projects are loading from server...</div>
+        <div className="text-orange-600 font-serif font-bold">Please wait projects are loading...</div>
       </div>
     );
   }
@@ -42,28 +42,32 @@ export default function Projects() {
   }
 
   return (
-    <section className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-
-      {projects.map((project, index) => (
-        <motion.div
-          key={project.id}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.2 }}
-          className="border rounded-lg shadow p-4 hover:shadow-lg"
-        >
-          <h2 className="text-xl font-bold text-orange-600">{project.name}</h2>
-
-          <p className="text-gray-600 leading-relaxed mt-2">{project.title_description}</p>
-
-          <Link
-            to={`/projects/${project.id}`}
-            className="mt-4 inline-block text-grey-800 hover:underline font-serif font-bold"
+    <>
+      <section className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.id}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            className="border rounded-lg shadow p-4 hover:shadow-lg"
           >
-            View Complete Project →
-          </Link>
-        </motion.div>
-      ))}
-    </section>
+            <h2 className="text-xl font-bold text-orange-600">{project.name}</h2>
+
+            <p className="text-gray-600 leading-relaxed mt-2">{project.title_description}</p>
+
+            <Link
+              to={`/projects/${project.id}`}
+              className="mt-4 inline-block text-grey-800 hover:underline font-serif font-bold"
+            >
+              View Complete Project →
+            </Link>
+          </motion.div>
+        ))}
+      </section>
+      <div class="flex flex-col justify-end items-center h-40">
+        <p class="text-3xl text-gray-800 font-bold">𝑀𝑜𝓇𝑒 𝓅𝓇𝑜𝒿𝑒𝒸𝓉𝓈 𝒶𝓇𝑒 𝒸𝑜𝓂𝒾𝓃𝑔 𝓈𝑜𝑜𝓃...</p>
+      </div>
+    </>
   );
 }

@@ -60,7 +60,7 @@ export default function Home() {
           className="rounded-lg shadow-lg w-80 h-auto object-cover"
         />
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Who Am I</h2>
           <p className="text-gray-600 leading-relaxed">
             I’m a 2025 graduate and I am a passionate and detail-oriented Full Stack Developer with a strong foundation in React.js, Django, Node.js, and modern frontend/backend technologies. 
             I specialize in building responsive, user-friendly, and performance-optimized web applications.<br/><br/>
@@ -83,8 +83,8 @@ export default function Home() {
       {/* SKILLS SECTION */}
       
 
-      <section className="p-8 bg-gradient-to-r from-teal-50 via-blue-50 to-cyan-50">
-        <h2 className="text-3xl font-bold text-black mb-6 text-center">Skills</h2>
+      <section className="p-8 bg-gradient-to-r from-cyan-50 to-green-50">
+        <h2 className="text-3xl font-bold text-black mb-6 text-center"> My Skillset</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { skill_name: "HTML", icon: "https://i.ibb.co/j9tt2j2x/html-5-svgrepo-com.png" },
@@ -110,7 +110,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
 
 
       {/* MY WORK */}
@@ -155,26 +154,34 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="p-8 bg-gradient-to-r from-teal-50 via-blue-50 to-cyan-50"
+        className="flex p-8 bg-gradient-to-r from-teal-50 via-blue-50 to-cyan-50"
       >
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Education</h2>
-        <ul className="space-y-4 text-gray-600">
-          <li className="border-l-4 border-orange-500 pl-4">
-            <strong>B.Tech in Computer Science</strong> - RGUKT RK-Valley (2021-2025) 
-            <br/>
-            CGPA <span className="font-bold">8.0</span>
-          </li>
-          <li className="border-l-4 border-orange-500 pl-4">
-            <strong>Intermediate</strong> - RGUKT RK-Valley
-            <br/>
-            CGPA <span className="font-bold">9.5</span>
-          </li>
-          <li className="border-l-4 border-orange-500 pl-4">
-            <strong>High School</strong> - Zilla Parishad High School (Gorantla, 515231)
-            <br/>
-            GPA <span className="font-bold">10</span>
-          </li>
-        </ul>
+        <img
+          src="https://www.rguktrkv.ac.in/images/rkvlogo.png"
+          alt="IIT RK-Valley Image"
+          className="rounded-lg shadow-md w-80 h-auto object-cover mr-10"
+        />
+
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Education</h2>
+          <ul className="space-y-4 text-gray-600">
+            <li className="border-l-4 border-orange-500 pl-4">
+              <strong>B.Tech in Computer Science</strong> - RGUKT IIIT RK-Valley (2021-2025) 
+              <br/>
+              CGPA <span className="font-bold">8.0</span>
+            </li>
+            <li className="border-l-4 border-orange-500 pl-4">
+              <strong>Intermediate</strong> - RGUKT IIIT RK-Valley
+              <br/>
+              CGPA <span className="font-bold">9.5</span>
+            </li>
+            <li className="border-l-4 border-orange-500 pl-4">
+              <strong>High School</strong> - Zilla Parishad High School - 2019 (Gorantla, 515231)
+              <br/>
+              GPA <span className="font-bold">10</span>
+            </li>
+          </ul>
+        </div>
       </motion.section>
 
       {/* RESUME */}
@@ -198,19 +205,31 @@ export default function Home() {
           View Resume
         </a>
       </motion.section>
+      
+      {/*Acknowledgement*/}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="p-8 bg-gradient-to-r from-teal-50 via-blue-50 to-cyan-50 text-center"
+      >
+        <p className="font-bold text-black text-xl font-sans"> Thank you very much for visiting my portfolio...❤️</p>
+      </motion.section>
+
 
       {/* FOOTER */}
       <footer className="p-6 bg-gray-900 text-white text-center">
         <p className="mb-4">Connect with me:</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 justify-items-center mb-4">
-          <a href="https://github.com/sadiqbasha190133/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
-            GitHub
+          <a href="https://x.com/TheNameISADiQ" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            X (Twitter)
           </a>
           <a href="https://www.linkedin.com/in/shaik-sadiq-basha/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
             LinkedIn
           </a>
-          <a href="https://x.com/TheNameISADiQ" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
-            X (Twitter)
+          <a href="https://github.com/sadiqbasha190133/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            GitHub
           </a>
           <a href="mailto:shaiksadiqbasha190133@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
             shaiksadiqbasha190133@gmail.com
@@ -219,7 +238,6 @@ export default function Home() {
             +91 9618460979
           </a>
         </div>
-
         <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Sadiq Shaik. All rights reserved.</p>
       </footer>
 
