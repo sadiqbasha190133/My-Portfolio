@@ -9,14 +9,14 @@ export default function Projects() {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      try{
+      try {
         const res = await API.get("/projects");
         setProjects(res.data)
       }
-      catch (e){
+      catch (e) {
         console.log(e)
       }
-      finally{
+      finally {
         setloading(false)
       }
     };
@@ -46,7 +46,7 @@ export default function Projects() {
       <section className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <motion.div
-            key={project.id}
+            key={project._id}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -57,7 +57,7 @@ export default function Projects() {
             <p className="text-gray-600 leading-relaxed mt-2">{project.title_description}</p>
 
             <Link
-              to={`/projects/${project.id}`}
+              to={`/projects/${project._id}`}
               className="mt-4 inline-block text-grey-800 hover:underline font-serif font-bold"
             >
               View Complete Project →
@@ -65,9 +65,12 @@ export default function Projects() {
           </motion.div>
         ))}
       </section>
-      <div class="flex flex-col justify-end items-center h-40">
-        <p class="text-3xl text-gray-800 font-bold">𝑀𝑜𝓇𝑒 𝓅𝓇𝑜𝒿𝑒𝒸𝓉𝓈 𝒶𝓇𝑒 𝒸𝑜𝓂𝒾𝓃𝑔 𝓈𝑜𝑜𝓃...</p>
+      <div className="flex justify-center items-center h-40">
+        <p className="text-2xl text-gray-800 font-bold text-center">
+          𝑀𝑜𝓇𝑒 𝓅𝓇𝑜𝒿𝑒𝒸𝓉𝓈 𝒶𝓇𝑒 𝒸𝑜𝓂𝒾𝓃𝑔 𝓈𝑜𝑜𝓃...
+        </p>
       </div>
+
     </>
   );
 }

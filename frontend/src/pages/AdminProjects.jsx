@@ -27,7 +27,7 @@ export default function Projects() {
           <p className="text-gray-600 mt-2">{project.title_description}</p>
 
           <Link
-            to={`/admin/projects/update/${project.id}`}
+            to={`/admin/projects/update/${project._id}`}
             className="mt-4 inline-block text-blue-600 hover:underline"
           >
             Update Project
