@@ -57,7 +57,7 @@ export default function Projects() {
             <p className="text-gray-600 leading-relaxed mt-2">{project.title_description}</p>
 
             <Link
-              to={`/projects/${project._id}`}
+              to={`/projects/${project.id}`}
               className="mt-4 inline-block text-grey-800 hover:underline font-serif font-bold"
             >
               View Complete Project →
