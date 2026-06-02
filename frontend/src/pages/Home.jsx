@@ -168,7 +168,7 @@ export default function Home() {
             <li className="border-l-4 border-orange-500 pl-4">
               <strong>B.Tech in Computer Science</strong> - RGUKT IIIT RK-Valley (2021-2025) 
               <br/>
-              CGPA <span className="font-bold">8.0</span>
+              CGPA <span className="font-bold">8.1</span>
             </li>
             <li className="border-l-4 border-orange-500 pl-4">
               <strong>Intermediate</strong> - RGUKT IIIT RK-Valley
