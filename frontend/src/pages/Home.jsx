@@ -231,8 +231,8 @@ export default function Home() {
           <a href="https://github.com/sadiqbasha190133/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
             GitHub
           </a>
-          <a href="mailto:shaiksadiqbasha190133@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
-            shaiksadiqbasha190133@gmail.com
+          <a href="mailto:sadiq.dev66@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            sadiq.dev66@gmail.com
           </a>
           <a href="tel:+919618460979" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
             +91 9618460979
