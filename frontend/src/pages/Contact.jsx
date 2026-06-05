@@ -56,12 +56,12 @@ export default function Contact() {
 
       <div className="space-y-4 text-center text-gray-700 text-lg">
         <p>
-          📞 Mobile: <a href="tel:+911234567890" className="text-orange-600 hover:underline">+91 9618460979</a>
+          📞 Mobile: <a href="tel:9618460979" className="text-orange-600 hover:underline">+91 9618460979</a>
         </p>
         <p>
           📧 Email:{" "}
-          <a href="mailto:your.email@example.com" className="text-orange-600 hover:underline">
-            shaiksadiqbasha190133@gmail.com
+          <a href="mailto:sadiq.dev66@gmail.com" className="text-orange-600 hover:underline">
+            sadiq.dev66@gmail.com
           </a>
         </p>
       </div>
