@@ -208,7 +208,7 @@ export default function Home() {
                 🤖 YouTube AI Transcript Generator
               </span>
               <span className="text-gray-600 pl-6 border-l-2 border-orange-400 text-sm">
-                An AI-driven platform leveraging language models and the MERN stack to extract, process, and summarize complex video content.
+                An AI-driven platform leveraging AssemblyAI for precise audio extraction and Google AI Studio (Gemini) to process and summarize complex video content
               </span>
             </li>
 
