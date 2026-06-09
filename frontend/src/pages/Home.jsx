@@ -13,18 +13,32 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="flex-1"
         >
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-            Hi, I'm <span className="text-orange-400">Sadiq Shaik</span> 👋
+          <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-orange-400 bg-orange-500/10 rounded-full border border-orange-500/20">
+            🚀 Full Stack Developer
+          </span>
+
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+            Hi, Welcome to My Portfolio 👋
+            <br />
+            <br />
+            I'm <span className="text-orange-400">Shaik Sadiq Basha</span>
           </h1>
-          <p className="mt-4 text-lg text-gray-300 max-w-xl">
-            A passionate Full Stack Developer crafting modern, responsive, and user-friendly applications.
+
+          <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+            A Full Stack Developer Crafting Ideas into Meaningful Digital Experiences
           </p>
-          <Link
+
+          <p className="mt-4 text-gray-400 max-w-2xl">
+            Explore my portfolio to discover my projects, technical skills,
+            and the journey behind my growth as a developer.
+          </p>
+
+          {/* <Link
             to="/projects"
-            className="mt-6 inline-block px-6 py-3 bg-orange-500 hover:bg-orange-400 rounded-lg text-lg font-semibold transition-all shadow-lg"
+            className="mt-8 inline-block px-7 py-3 bg-orange-500 hover:bg-orange-400 rounded-lg text-lg font-semibold transition-all shadow-lg hover:scale-105"
           >
-            View My Work
-          </Link>
+            View My Work →
+          </Link> */}
         </motion.div>
 
         <motion.div
@@ -33,11 +47,6 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="flex-1 flex justify-center mt-6 md:mt-0"
         >
-          {/* <img
-            src="https://i.ibb.co/TqRJK8Lp/Digital-nomad-lifestyle-young-man-engaged-with-laptop-in-3d-character-illustration-Premium-AI-genera.jpg"
-            alt="Sadiq portrait"
-            className="rounded-full shadow-lg w-60 h-60 object-cover border-4 border-orange-400"
-          /> */}
           <img
             src="https://i.ibb.co/n8gnSHZ8/sadiq-portfolio-photo1.jpg"
             alt="Sadiq portrait"
@@ -46,42 +55,99 @@ export default function Home() {
         </motion.div>
       </section>
 
+
+
       {/* ABOUT ME */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="p-8 bg-gradient-to-r from-orange-100 via-yellow-50 to-orange-50 flex flex-col md:flex-row items-center gap-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.15, delayChildren: 0.1 }
+          }
+        }}
+        className="p-8 md:p-12 bg-gradient-to-br from-orange-100 via-yellow-50 to-orange-50 flex flex-col md:flex-row items-center gap-12 rounded-3xl shadow-sm border border-orange-100/50"
       >
-        <img
-          src="https://i.ibb.co/j9W91mVP/about-me.jpg"
-          alt="About me"
-          className="rounded-lg shadow-lg w-80 h-auto object-cover"
-        />
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Who Am I</h2>
-          <p className="text-gray-600 leading-relaxed">
-            I’m a 2025 graduate and I am a passionate and detail-oriented Full Stack Developer with a strong foundation in React.js, Django, Node.js, and modern frontend/backend technologies. 
-            I specialize in building responsive, user-friendly, and performance-optimized web applications.<br/><br/>
+        {/* Left Column: Image with dynamic hover scale */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, scale: 0.95 },
+            visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } }
+          }}
+          className="relative group flex-shrink-0"
+        >
+          <div className="absolute inset-0 bg-gradient-to-tr from-orange-400 to-yellow-400 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+          <img
+            src="https://i.ibb.co/j9W91mVP/about-me.jpg"
+            alt="About me"
+            className="relative z-10 rounded-2xl shadow-xl w-full max-w-xs md:w-80 h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-300"
+          />
+        </motion.div>
 
-            In my final year of my B.Tech in Computer Science at RGUKT RK-Valley, I’ve worked on real-world projects like a "Digital-Outpass-System" and a "YouTube-AI-Transcript-Generator", applying skills in MERN stack, REST APIs, PostgreSQL, MongoDB, and Generative AI.
-            I enjoy transforming ideas into impactful digital solutions, learning new technologies, and solving complex problems with clean, scalable code. My goal is to contribute to projects that make a difference, while constantly improving my technical expertise and design sense.
-            <br/>
-            <br/>
-            When I’m not coding, you’ll often find me playing chess, listening to music, or doing random fun (and sometimes mad) things that spark creativity and keep life interesting.
-          </p>
-          {/* <Link
-            to="/about"
-            className="mt-4 inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-400 transition-all"
+        {/* Right Column: Text & Content Grid */}
+        <div className="flex-1 space-y-6">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
           >
-            Learn More
-          </Link> */}
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">
+              Who Am I?
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              I'm a Computer Science & Engineering graduate (2025) from RGUKT RK-Valley, specializing in
+              high-concurrency backend architectures and responsive, state-managed frontend interfaces.
+              I bridge the gap between intricate data workflows and intuitive user experiences.
+            </p>
+          </motion.div>
+
+          {/* The Visual Booster: Key Stats / Value Pillars Grid */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2"
+          >
+            <div className="p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-orange-200/40 shadow-sm">
+              <h3 className="font-bold text-sm tracking-wider uppercase mb-1 text-orange-600">
+                Core Engine
+              </h3>
+              <p className="text-gray-600 text-sm">
+                React.js, FastAPI, Django, and modern MERN architectures.
+              </p>
+            </div>
+
+            <div className="p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-orange-200/40 shadow-sm">
+              <h3 className="font-bold text-sm tracking-wider uppercase mb-1 text-orange-600">
+                Development Focus
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Dynamic REST APIs, secure system design, and AI-driven platforms.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            className="border-t border-orange-200/60 pt-4"
+          >
+            <p className="text-gray-600 leading-relaxed italic text-sm">
+              <span className="font-semibold text-gray-800 not-italic">When I'm not coding —</span> you'll find me playing chess, exploring science-fiction worlds, discovering music, and experimenting with side projects that fuel creativity and continuous learning.
+            </p>
+          </motion.div>
         </div>
       </motion.section>
 
+
       {/* SKILLS SECTION */}
-      
 
       <section className="p-8 bg-gradient-to-r from-cyan-50 to-green-50">
         <h2 className="text-3xl font-bold text-black mb-6 text-center"> My Skillset</h2>
@@ -111,41 +177,75 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* MY WORK */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="p-8 bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50 flex flex-col md:flex-row items-center gap-8"
+        className="p-8 md:p-12 bg-gradient-to-r from-orange-50 via-pink-50 to-yellow-50 flex flex-col md:flex-row items-center gap-12 rounded-2xl shadow-sm"
       >
         <div className="flex-1">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">My Work</h2>
-          <p className="text-gray-600 leading-relaxed">
-             specialize in building modern, responsive, and high-performance web applications using technologies like React.js, FastAPI, Django, and the MERN stack.<br/>
-              Some of my notable projects include:<br/>
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">
+            Featured Engineering
+          </h2>
 
-              <span className="font-bold">Digital Outpass System</span> – A secure platform to manage student movement approvals in educational institutions.<br/>
-
-              <span className="font-bold">YouTube AI Transcript Generator – </span>An AI-powered tool that generates accurate transcripts using advanced language models.<br/>
-
-              <span className="font-bold">Oyo Clone – </span> A hotel booking system built with Django, MySQL, and caching techniques.<br/>
-
-              My work focuses on clean UI/UX, optimized backend performance, and delivering real-world, scalable solutions.
+          <p className="text-gray-600 leading-relaxed mb-6">
+            I specialize in architecting high-performance, responsive web applications across the full stack. Focusing on clean UI/UX, optimized backend databases, and scalable logic, my notable work includes:
           </p>
+
+          <ul className="space-y-4 mb-8 text-gray-700">
+            <li className="flex flex-col gap-1">
+              <span className="font-bold text-gray-900 text-lg">
+                🚀 Dynamic Portfolio (This Site)
+              </span>
+              <span className="text-gray-600 pl-6 border-l-2 border-orange-400 text-sm">
+                A self-contained portfolio built with React and FastAPI featuring a secure admin portal to dynamically manage and update projects data in real-time.
+              </span>
+            </li>
+
+            <li className="flex flex-col gap-1">
+              <span className="font-bold text-gray-900 text-lg">
+                🤖 YouTube AI Transcript Generator
+              </span>
+              <span className="text-gray-600 pl-6 border-l-2 border-orange-400 text-sm">
+                An AI-driven platform leveraging language models and the MERN stack to extract, process, and summarize complex video content.
+              </span>
+            </li>
+
+            <li className="flex flex-col gap-1">
+              <span className="font-bold text-gray-900 text-lg">
+                🔒 Digital Outpass System
+              </span>
+              <span className="text-gray-600 pl-6 border-l-2 border-orange-400 text-sm">
+                An automated, enterprise-grade workflow solution utilizing REST APIs to securely track and authorize student permissions.
+              </span>
+            </li>
+
+            <li className="flex flex-col gap-1">
+              <span className="font-bold text-gray-900 text-lg">
+                🏨 Oyo Rooms Architecture Clone
+              </span>
+              <span className="text-gray-600 pl-6 border-l-2 border-orange-400 text-sm">
+                A high-traffic hotel booking system engineered with Django, MySQL, and server-side caching techniques for low-latency searching.
+              </span>
+            </li>
+          </ul>
+
           <Link
             to="/projects"
-            className="mt-4 inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-400 transition-all"
+            className="inline-block px-6 py-3 font-semibold bg-orange-500 text-white rounded-xl shadow-md hover:bg-orange-400 hover:shadow-lg transition-all transform hover:-translate-y-0.5"
           >
-            Explore Projects
+            Explore Full Portfolio
           </Link>
         </div>
-        <img
-          src="https://i.ibb.co/ycyy6ytL/Software-development-programming-language-coding-Premium-Vector.jpg"
-          alt="My work showcase"
-          className="rounded-lg shadow-md w-80 h-auto object-cover"
-        />
+
+        <div className="w-full md:w-auto flex justify-center">
+          <img
+            src="https://i.ibb.co/ycyy6ytL/Software-development-programming-language-coding-Premium-Vector.jpg"
+            alt="Software engineering architecture illustration"
+            className="rounded-2xl shadow-lg w-full max-w-sm md:w-96 h-auto object-cover border border-white/50"
+          />
+        </div>
       </motion.section>
 
       {/* EDUCATION */}
@@ -166,18 +266,18 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Education</h2>
           <ul className="space-y-4 text-gray-600">
             <li className="border-l-4 border-orange-500 pl-4">
-              <strong>B.Tech in Computer Science</strong> - RGUKT IIIT RK-Valley (2021-2025) 
-              <br/>
+              <strong>B.Tech in Computer Science</strong> - RGUKT IIIT RK-Valley (2021-2025)
+              <br />
               CGPA <span className="font-bold">8.1</span>
             </li>
             <li className="border-l-4 border-orange-500 pl-4">
-              <strong>Intermediate</strong> - RGUKT IIIT RK-Valley
-              <br/>
+              <strong>Intermediate</strong> - RGUKT IIIT RK-Valley (2019-2021)
+              <br />
               CGPA <span className="font-bold">9.5</span>
             </li>
             <li className="border-l-4 border-orange-500 pl-4">
               <strong>High School</strong> - Zilla Parishad High School - 2019 (Gorantla, 515231)
-              <br/>
+              <br />
               GPA <span className="font-bold">10</span>
             </li>
           </ul>
@@ -205,7 +305,7 @@ export default function Home() {
           View Resume
         </a>
       </motion.section>
-      
+
       {/*Acknowledgement*/}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
