@@ -18,7 +18,8 @@ MyPortfolio is a full-stack portfolio management platform that enables developer
 Unlike traditional static portfolios, this application provides a dynamic content management system where project information can be created, updated, or deleted directly from an admin dashboard.  
 
 
-# Key Features
+# Key Features  
+
 ✅ Fully Responsive Design  
 
 ✅ Dynamic Project Management  
@@ -99,25 +100,31 @@ FastAPI Backend
  
 1️⃣ Clone the Repository  
 
-&nbsp;&nbsp;&nbsp;git clone https://github.com/your-username/MyPortfolio.git <br/>
-&nbsp;&nbsp;&nbsp;cd MyPortfolio <br/>
+&nbsp;&nbsp;&nbsp;git clone https://github.com/your-username/MyPortfolio.git  
+
+&nbsp;&nbsp;&nbsp;cd MyPortfolio  
           
 2️⃣ Frontend Setup  
 
-  &nbsp;&nbsp;&nbsp;Navigate to the frontend folder:<br/>
+  &nbsp;&nbsp;&nbsp;Navigate to the frontend folder:  
+  
   &nbsp;&nbsp;&nbsp;`cd frontend`
       
   install dependencies:  
   
-  &nbsp;&nbsp;&nbsp;`npm install`<br/>
-  &nbsp;&nbsp;&nbsp;Create a .env file:<br/>
-  &nbsp;&nbsp;&nbsp;`VITE_API_URL=http://localhost:8000`<br/>
+  &nbsp;&nbsp;&nbsp;`npm install`  
+  
+  &nbsp;&nbsp;&nbsp;Create a .env file:  
+  
+  &nbsp;&nbsp;&nbsp;`VITE_API_URL=http://localhost:8000`
 
 # Start the development server:
 
-&nbsp;&nbsp;&nbsp;`npm run dev`<br/>
-&nbsp;&nbsp;&nbsp;Frontend will run on:<br/>
-&nbsp;&nbsp;&nbsp;`http://localhost:5173`<br/>
+&nbsp;&nbsp;&nbsp;`npm run dev`  
+
+&nbsp;&nbsp;&nbsp;Frontend will run on:  
+
+&nbsp;&nbsp;&nbsp;`http://localhost:5173`  
 
 
 3️⃣ Backend Setup
@@ -128,10 +135,11 @@ Navigate to the backend folder:
 
 Create virtual environment:
 
-Windows: <br/>
-&nbsp;&nbsp;`python -m venv venv`<br/>
+Windows:  
 
-&nbsp;&nbsp;`venv\Scripts\activate`<br/>
+&nbsp;&nbsp;`python -m venv venv`
+
+&nbsp;&nbsp;`venv\Scripts\activate`
 
 
 Install dependencies:
