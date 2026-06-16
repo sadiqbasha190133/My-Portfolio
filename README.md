@@ -93,29 +93,31 @@ FastAPI Backend
       ▼
  PostgreSQL Database
 
-
- # ⚙️ Installation & Setup
 ```
 
+ # ⚙️ Installation & Setup
  
-1️⃣ Clone the Repository
-&nbsp;&nbsp;&nbsp;git clone https://github.com/your-username/MyPortfolio.git
-&nbsp;&nbsp;&nbsp;cd MyPortfolio
+1️⃣ Clone the Repository  
+
+&nbsp;&nbsp;&nbsp;git clone https://github.com/your-username/MyPortfolio.git <br/>
+&nbsp;&nbsp;&nbsp;cd MyPortfolio <br/>
           
-2️⃣ Frontend Setup
-  &nbsp;&nbsp;&nbsp;Navigate to the frontend folder:
+2️⃣ Frontend Setup  
+
+  &nbsp;&nbsp;&nbsp;Navigate to the frontend folder:<br/>
   &nbsp;&nbsp;&nbsp;`cd frontend`
       
-  install dependencies:
-  &nbsp;&nbsp;&nbsp;`npm install`
-  &nbsp;&nbsp;&nbsp;Create a .env file:
-  &nbsp;&nbsp;&nbsp;`VITE_API_URL=http://localhost:8000`
+  install dependencies:  
+  
+  &nbsp;&nbsp;&nbsp;`npm install`<br/>
+  &nbsp;&nbsp;&nbsp;Create a .env file:<br/>
+  &nbsp;&nbsp;&nbsp;`VITE_API_URL=http://localhost:8000`<br/>
 
 # Start the development server:
 
-&nbsp;&nbsp;&nbsp;`npm run dev`
-&nbsp;&nbsp;&nbsp;Frontend will run on:
-&nbsp;&nbsp;&nbsp;`http://localhost:5173`
+&nbsp;&nbsp;&nbsp;`npm run dev`<br/>
+&nbsp;&nbsp;&nbsp;Frontend will run on:<br/>
+&nbsp;&nbsp;&nbsp;`http://localhost:5173`<br/>
 
 
 3️⃣ Backend Setup
@@ -126,10 +128,10 @@ Navigate to the backend folder:
 
 Create virtual environment:
 
-Windows
-&nbsp;&nbsp;`python -m venv venv`
+Windows: <br/>
+&nbsp;&nbsp;`python -m venv venv`<br/>
 
-&nbsp;&nbsp;`venv\Scripts\activate`
+&nbsp;&nbsp;`venv\Scripts\activate`<br/>
 
 
 Install dependencies:
