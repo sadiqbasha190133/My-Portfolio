@@ -45,27 +45,27 @@ Unlike traditional static portfolios, this application provides a dynamic conten
 
 Frontend:
 
-  React.js
+  &nbsp;&nbsp;&nbsp; React.js
   
-  Tailwind CSS
+  &nbsp;&nbsp;&nbsp;Tailwind CSS
   
-  Axios
+  &nbsp;&nbsp;&nbsp;Axios
   
-  React Router
+  &nbsp;&nbsp;&nbsp;React Router
   
 Backend
 
-  FastAPI
+  &nbsp;&nbsp;&nbsp;FastAPI
   
-  Python
+  &nbsp;&nbsp;&nbsp;Python
   
-  SQLAlchemy
+  &nbsp;&nbsp;&nbsp;SQLAlchemy
   
-  Pydantic
+  &nbsp;&nbsp;&nbsp;Pydantic
   
 Database
 
-  PostgreSQL
+  &nbsp;&nbsp;&nbsp;PostgreSQL
 
 
 # Deployment
@@ -84,7 +84,7 @@ Uptime Monitoring	Cron Jobs / Uptime Robot
 
 ### 🏗️ System Architecture
 
-```text
+```
 React Frontend
       │
       ▼
@@ -95,79 +95,80 @@ FastAPI Backend
 
 
  # ⚙️ Installation & Setup
+```
 
  
 1️⃣ Clone the Repository
-          git clone https://github.com/your-username/MyPortfolio.git
-          cd MyPortfolio
+&nbsp;&nbsp;&nbsp;git clone https://github.com/your-username/MyPortfolio.git
+&nbsp;&nbsp;&nbsp;cd MyPortfolio
           
 2️⃣ Frontend Setup
-          Navigate to the frontend folder:
-          cd frontend
+  &nbsp;&nbsp;&nbsp;Navigate to the frontend folder:
+  &nbsp;&nbsp;&nbsp;`cd frontend`
       
   install dependencies:
-      npm install
-      Create a .env file:
-      VITE_API_URL=http://localhost:8000
+  &nbsp;&nbsp;&nbsp;`npm install`
+  &nbsp;&nbsp;&nbsp;Create a .env file:
+  &nbsp;&nbsp;&nbsp;`VITE_API_URL=http://localhost:8000`
 
 # Start the development server:
 
-  npm run dev
-  Frontend will run on:
-  http://localhost:5173
+&nbsp;&nbsp;&nbsp;`npm run dev`
+&nbsp;&nbsp;&nbsp;Frontend will run on:
+&nbsp;&nbsp;&nbsp;`http://localhost:5173`
 
 
 3️⃣ Backend Setup
 
 Navigate to the backend folder:
 
-cd backend
+&nbsp;&nbsp;cd backend
 
 Create virtual environment:
 
 Windows
-python -m venv venv
+&nbsp;&nbsp;`python -m venv venv`
 
-venv\Scripts\activate
+&nbsp;&nbsp;`venv\Scripts\activate`
 
 
 Install dependencies:
 
-pip install -r requirements.txt
+&nbsp;&nbsp;`pip install -r requirements.txt`
 
-Create .env file:
+&nbsp;&nbsp;Create .env file:
 
-DATABASE_URL=postgresql://username:password@localhost:5432/database_name
+&nbsp;&nbsp;`DATABASE_URL=postgresql://username:password@localhost:5432/database_name`
 
 
 # Run the server:
 
-uvicorn app.main:app --reload
+`uvicorn app.main:app --reload`
 
 Backend will run on:
 
-http://localhost:8000
+`http://localhost:8000`
 
 
-🔐 Admin Features
+# 🔐 Admin Features
 
 The admin dashboard provides:
 
-Add Projects
+&nbsp;&nbsp;Add Projects
 
-Edit Projects
+&nbsp;&nbsp;Edit Projects
 
-Manage Portfolio Content
+&nbsp;&nbsp;Manage Portfolio Content
 
-Secure Authentication
+&nbsp;&nbsp;Secure Authentication
 
-👨‍💻 Author
+# 👨‍💻 Author
 
 Shaik Sadiq Basha
 
-GitHub: https://github.com/sadiqbasha190133/
+&nbsp;&nbsp;GitHub: `https://github.com/sadiqbasha190133/`
 
-LinkedIn: https://linkedin.com/in/shaik-sadiq-basha
+&nbsp;&nbsp;LinkedIn: `https://linkedin.com/in/shaik-sadiq-basha`
 
 If you found this project useful, consider giving it a ⭐ on GitHub.  
 
