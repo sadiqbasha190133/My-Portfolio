@@ -15,19 +15,30 @@ A modern Full Stack Portfolio Website built with React, Tailwind CSS, FastAPI, a
 
 MyPortfolio is a full-stack portfolio management platform that enables developers and professionals to showcase their work through a modern, responsive website.
 
-Unlike traditional static portfolios, this application provides a dynamic content management system where project information can be created, updated, or deleted directly from an admin dashboard.
+Unlike traditional static portfolios, this application provides a dynamic content management system where project information can be created, updated, or deleted directly from an admin dashboard.  
 
-Key Features
-✅ Fully Responsive Design
-✅ Dynamic Project Management
-✅ Secure Admin Authentication
-✅ Add New Projects in Real-Time
-✅ Update Existing Project Information
-✅ PostgreSQL Database Integration
-✅ RESTful API Architecture
-✅ Fast and Modern UI
-✅ SEO-Friendly Structure
-✅ Scalable Full-Stack Architecture
+
+# Key Features
+✅ Fully Responsive Design  
+
+✅ Dynamic Project Management  
+
+✅ Secure Admin Authentication  
+
+✅ Add New Projects in Real-Time  
+
+✅ Update Existing Project Information  
+
+✅ PostgreSQL Database Integration  
+
+✅ RESTful API Architecture  
+
+✅ Fast and Modern UI  
+
+✅ SEO-Friendly Structure  
+
+✅ Scalable Full-Stack Architecture  
+
 
 
 # 🛠️ Tech Stack
@@ -46,11 +57,16 @@ Database
 
 
 # Deployment
-# Service	    |     Platform
-Frontend	    |     Vercel
-Backend	      |     Render
-Database	    |     PostgreSQL
-Uptime Monitoring	Cron Jobs / Uptime Robot
+# Service	    |     Platform  
+
+Frontend	    |     Vercel  
+
+Backend	      |     Render  
+
+Database	    |     PostgreSQL  
+
+Uptime Monitoring	Cron Jobs / Uptime Robot  
+
 
 
 🏗️ System Architecture
