@@ -57,7 +57,9 @@ Database
 
 
 # Deployment
-# Service	    |     Platform  
+
+
+ Service	    |     Platform  
 
 Frontend	    |     Vercel  
 
@@ -80,6 +82,8 @@ FastAPI Backend
 
 
  # ⚙️ Installation & Setup
+
+ 
 1️⃣ Clone the Repository
           git clone https://github.com/your-username/MyPortfolio.git
           cd MyPortfolio
@@ -99,6 +103,62 @@ FastAPI Backend
   Frontend will run on:
   http://localhost:5173
 
+
+3️⃣ Backend Setup
+
+Navigate to the backend folder:
+
+cd backend
+
+Create virtual environment:
+
+Windows
+python -m venv venv
+
+venv\Scripts\activate
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Create .env file:
+
+DATABASE_URL=postgresql://username:password@localhost:5432/database_name
+
+
+# Run the server:
+
+uvicorn app.main:app --reload
+
+Backend will run on:
+
+http://localhost:8000
+
+
+🔐 Admin Features
+
+The admin dashboard provides:
+
+Add Projects
+
+Edit Projects
+
+Manage Portfolio Content
+
+Secure Authentication
+
+👨‍💻 Author
+
+Shaik Sadiq Basha
+
+GitHub: https://github.com/sadiqbasha190133/
+
+LinkedIn: https://linkedin.com/in/shaik-sadiq-basha
+
+If you found this project useful, consider giving it a ⭐ on GitHub.  
+
+Thank you for visiting my Github Repo
 
 
 
