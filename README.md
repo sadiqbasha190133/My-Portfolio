@@ -41,23 +41,34 @@ Unlike traditional static portfolios, this application provides a dynamic conten
 
 
 
-# 🛠️ Tech Stack
+# 🛠️ Tech Stack  
+
 Frontend:
+
   React.js
+  
   Tailwind CSS
+  
   Axios
+  
   React Router
+  
 Backend
+
   FastAPI
+  
   Python
+  
   SQLAlchemy
+  
   Pydantic
+  
 Database
+
   PostgreSQL
 
 
 # Deployment
-
 
  Service	    |     Platform  
 
@@ -71,7 +82,9 @@ Uptime Monitoring	Cron Jobs / Uptime Robot
 
 
 
-🏗️ System Architecture
+### 🏗️ System Architecture
+
+```text
 React Frontend
       │
       ▼
